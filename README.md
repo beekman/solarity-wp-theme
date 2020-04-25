@@ -1,4 +1,4 @@
-#Solarity theme
+# Solarity theme
 
 Solarity is a stark, minimalist WordPress theme developed by Ben Beekman for internationally renowned artist Peter Erskine’s portfolio site, erskinesolarart.net.
 

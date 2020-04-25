@@ -1,0 +1,518 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so solarity would look sweet.
+ don't forget to remove it for your site.
+*/
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+article p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga=1, dlig=1';
+  -ms-font-feature-settings: 'liga', 'dlig';
+  -o-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig'; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name: Solarity
+Author: Ben Beekman
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/* at this larger size, we can start to align images */
+.alignleft,
+img.alignleft {
+  display: inline;
+  float: left; }
+
+.alignright,
+img.alignright {
+  display: inline;
+  float: right;
+  padding-left: .75rem; }
+
+.aligncenter,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  float: none; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */ }
+  .entry-content .alignleft,
+  .entry-content img.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em; }
+  .entry-content .alignright,
+  .entry-content img.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em; }
+  .entry-content .aligncenter,
+  .entry-content img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+.metaslider-2775 .flexslider .caption-wrap,
+.metaslider_2587 .flexslider .caption-wrap {
+  left: 0; }
+  .metaslider-2775 .flexslider .caption-wrap .caption,
+  .metaslider-2775 .flexslider .caption-wrap .cs-title,
+  .metaslider-2775 .flexslider .caption-wrap .nivo-caption,
+  .metaslider_2587 .flexslider .caption-wrap .caption,
+  .metaslider_2587 .flexslider .caption-wrap .cs-title,
+  .metaslider_2587 .flexslider .caption-wrap .nivo-caption {
+    font: 28px/32px Palatino, sans;
+    text-shadow: 0 0 12.96px rgba(0, 0, 0, 0.8); }
+    .metaslider-2775 .flexslider .caption-wrap .caption strong,
+    .metaslider-2775 .flexslider .caption-wrap .cs-title strong,
+    .metaslider-2775 .flexslider .caption-wrap .nivo-caption strong,
+    .metaslider_2587 .flexslider .caption-wrap .caption strong,
+    .metaslider_2587 .flexslider .caption-wrap .cs-title strong,
+    .metaslider_2587 .flexslider .caption-wrap .nivo-caption strong {
+      font: 36px/42px Palatino, sans;
+      font-weight: normal; }
+
+.acf-map {
+  height: 400px; }
+
+/*********************
+GENERAL STYLES
+*********************/
+#container article {
+  padding: 0; }
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 660px; }
+  .wrap > .last-col {
+    padding-top: 20px; }
+
+/*********************
+HEADER STYLES
+*********************/
+.logo-wrap {
+  float: left; }
+
+.social-buttons {
+  float: right; }
+
+header .top-nav {
+  padding-top: 0; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  border: 0;
+  margin: 0;
+  /* end .menu ul li */ }
+  .nav li {
+    float: left;
+    position: relative;
+    /* showing sub-menus */ }
+    .nav li a {
+      border-bottom: 0;
+      color: #f2f2f2;
+      display: block;
+      padding: .75em;
+      text-decoration: none;
+      text-shadow: 0 0 1px #323944; }
+      .nav li a:hover, .nav li a:focus {
+        background-color: white(0.75);
+        text-decoration: none;
+        text-shadow: 0 0 0 transparent; }
+    .nav li .sub-menu li,
+    .nav li .children li {
+      line-height: 1.2; }
+      .nav li .sub-menu li a,
+      .nav li .children li a {
+        background-color: white(0.85);
+        color: #323944;
+        padding: 10px 10px 10px 30px;
+        text-shadow: 0 0 0 transparent; }
+        .nav li .sub-menu li a:hover, .nav li .sub-menu li a:focus,
+        .nav li .children li a:hover,
+        .nav li .children li a:focus {
+          background-color: #323944 0.8;
+          color: white 1; }
+      .nav li .sub-menu li .sub-menu li a,
+      .nav li .sub-menu li .children li a,
+      .nav li .children li .sub-menu li a,
+      .nav li .children li .children li a {
+        font-size: 1rem;
+        padding-left: 10px; }
+        .nav li .sub-menu li .sub-menu li a:hover, .nav li .sub-menu li .sub-menu li a:focus,
+        .nav li .sub-menu li .children li a:hover,
+        .nav li .sub-menu li .children li a:focus,
+        .nav li .children li .sub-menu li a:hover,
+        .nav li .children li .sub-menu li a:focus,
+        .nav li .children li .children li a:hover,
+        .nav li .children li .children li a:focus {
+          background-color: #323944 0.8;
+          color: white 1; }
+    .nav li ul {
+      margin-top: 0; }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      border: 1px solid white 0.8;
+      border-top: 0;
+      margin-top: 0;
+      position: absolute;
+      visibility: hidden;
+      z-index: 8999;
+      /* highlight sub-menu current page */ }
+      .nav li ul.sub-menu li a,
+      .nav li ul.children li a {
+        background-color: white 0.95;
+        border: 1px solid white 0.85;
+        border-right: 0;
+        display: block;
+        padding: 10px 5px 10px 10px;
+        text-decoration: none;
+        width: 170px; }
+        .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+        .nav li ul.children li a:hover,
+        .nav li ul.children li a:focus {
+          background-color: #323944;
+          color: white;
+          text-decoration: none; }
+      .nav li ul.sub-menu li:last-child a,
+      .nav li ul.children li:last-child a {
+        border-bottom: 0; }
+      .nav li ul.sub-menu li ul,
+      .nav li ul.children li ul {
+        left: 100%;
+        top: 0; }
+    .nav li:hover > ul {
+      top: auto;
+      visibility: visible; }
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  margin-top: 0; }
+
+.widgettitle {
+  margin-bottom: .5rem; }
+
+.widget {
+  margin: 0 0 1rem;
+  padding: 0 10px; }
+  .widget ul li {
+    margin-bottom: .25rem;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: .5rem;
+      padding-left: 1em; }
+
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  			/*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */ }
+
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+.wrap {
+  width: 900px; }
+
+.acf-map {
+  height: 680px; }
+
+.metaslider-2775 .flexslider .caption-wrap,
+.metaslider_2587 .flexslider .caption-wrap {
+  background: transparent !important;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  line-height: 48px;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+  .metaslider-2775 .flexslider .caption-wrap .caption,
+  .metaslider-2775 .flexslider .caption-wrap .cs-title,
+  .metaslider-2775 .flexslider .caption-wrap .nivo-caption,
+  .metaslider_2587 .flexslider .caption-wrap .caption,
+  .metaslider_2587 .flexslider .caption-wrap .cs-title,
+  .metaslider_2587 .flexslider .caption-wrap .nivo-caption {
+    font-size: 40px;
+    font-family: 'Palatino';
+    color: white;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center; }
+    .metaslider-2775 .flexslider .caption-wrap .caption strong,
+    .metaslider-2775 .flexslider .caption-wrap .cs-title strong,
+    .metaslider-2775 .flexslider .caption-wrap .nivo-caption strong,
+    .metaslider_2587 .flexslider .caption-wrap .caption strong,
+    .metaslider_2587 .flexslider .caption-wrap .cs-title strong,
+    .metaslider_2587 .flexslider .caption-wrap .nivo-caption strong {
+      font-size: 44px; }
+  .metaslider-2775 .flexslider .caption-wrap .wrap,
+  .metaslider_2587 .flexslider .caption-wrap .wrap {
+    height: 100% !important;
+    width: 100% !important; }
+  .metaslider-2775 .flexslider .caption-wrap header h1,
+  .metaslider_2587 .flexslider .caption-wrap header h1 {
+    display: none !important;
+    visibility: hidden !important; }
+  .metaslider-2775 .flexslider .caption-wrap #slidecaption,
+  .metaslider_2587 .flexslider .caption-wrap #slidecaption {
+    overflow: visible;
+    text-align: center;
+    width: 100%; }
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

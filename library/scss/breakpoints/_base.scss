@@ -1,0 +1,969 @@
+/*****************************************************************
+Site Name: Solarity
+Author: Ben Beekman
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+*****************************************************************/
+body #container {
+	margin-top: 55px; //make room for the meanmenu
+}
+
+body.admin-bar {
+	.mean-bar {
+		// position: fixed;
+	}
+
+	header.header {
+		position: fixed;
+		top: 33px;
+	}
+	#container {
+		margin-top: 73px; //add 33px for the Wordpress admin bar
+	}
+}
+
+header.header {
+	background-color: black;
+}
+// Styling for the new full-width metaSlider-based home page
+.metaslider-2775,
+.metaslider_2587 {
+	height: 100%;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	.flexslider,
+	.flex-viewport {
+		border: 0;
+		height: 100% !important;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.flexslider {
+		overflow: hidden;
+		margin: 0 !important;
+		.slides {
+			// height: 100% !important;
+			li {
+				// width: 100%;
+				// height: 100% !important;
+				margin: 0;
+				padding: 0;
+				// background-size: cover !important;
+			}
+
+
+			.caption-wrap {
+				background: transparent;
+				color: white;
+				display: block;
+				left: 0;
+				margin: 0 !important;
+				opacity: 1;
+				padding: 5px 50px !important;
+				text-align: center;
+				top: 50% !important;
+				width: 100%;
+				z-index: 0 !important;
+
+				.caption,
+				.cs-title,
+				.nivo-caption {
+					font: 20px/26px Palatino, sans;
+					padding: 5px 50px;
+					text-align: center;
+					text-shadow: 0 0 9px rgba(0, 0, 0, .8);
+					word-wrap: normal;
+				}
+			}
+
+			.flex-direction-nav li a {
+				background-color: transparent;
+				background-repeat: no-repeat;
+				border: 0;
+				box-shadow: none !important;
+				cursor: pointer;
+				display: block;
+				height: 80px;
+				margin: -84px 0 0;
+				opacity: 0;
+				position: absolute;
+				text-indent: -9999px;
+				top: 50%;
+				transition: all .3s ease;
+				width: 84px;
+				z-index: 10;
+			}
+			.flex-control-nav {
+				bottom: 12px;
+				position: fixed;
+			}
+		}
+	}
+}
+// .home {
+//
+//
+// 		.wrap {
+// 			width: 100% !important;
+// 		}
+//
+// 		article {
+// 			padding: 0;
+//
+// 			header {
+// 				padding: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+
+.home article header {
+	padding: 0;
+	h1 {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+#slidecaption {
+	overflow: visible;
+	text-align: center;
+	width: 100%;
+	// height: 100px;
+	// line-height: 1.3;
+}
+
+
+
+//
+// 	article {
+// 		background-color: rgba(0, 0, 0, .35);
+// 		bottom: 0;
+// 		height: 80px;
+// 		left: 0;
+// 		margin: 0;
+// 		overflow: hidden;
+// 		position: fixed;
+// 		text-align: left;
+// 		width: 100%;
+// 		z-index: 3;
+//
+// 		p {
+// 			bottom: 40px;
+// 			font-size: 24px;
+// 			left: 30px;
+// 			margin: 0;
+// 			position: absolute;
+// 			text-align: left;
+// 		}
+// 	}
+// }
+
+.synved-social-container {
+	padding-top: 10px;
+}
+
+
+// /********************
+// GENERAL STYLES
+// ********************/
+// #supersized {
+// 	display: block;
+// 	height: 100%;
+// 	left: 0;
+// 	margin: 0;
+// 	overflow: hidden;
+// 	position: fixed;
+// 	top: 0;
+// 	width: 100%;
+// 	z-index: -999;
+// }
+
+.margin-top {
+	margin-top: 3rem;
+}
+
+.full-width {
+	margin-top: 5px;
+}
+
+.social-buttons {
+	margin-top: 3px;
+}
+
+.sidebar .social-buttons {
+	float: left;
+}
+
+.bne-testimonial-slider-wrapper {
+	background: black(.8);
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-color: rgb(43, 48, 59);
+	color: $text-grey;
+	font-family: $droidsans;
+	font-size: 100%;
+	line-height: 1.5;
+}
+body.home {
+	overflow: hidden;/*Needed to eliminate scrollbars*/
+}
+
+#searchsubmit {
+	font-size: 14px;
+}
+/*******************
+WORDPRESS BODY CLASSES
+style a page via class
+*******************/
+.home .footer {
+	// color: rgb(248, 249, 250);
+	// bottom: 40px;
+	// position: absolute;
+	// text-align: center;
+	// width: 100%;
+	// background-color: black(.25);
+	// padding-bottom: .8em;
+	#inner-footer {
+		// display: none;
+		// visibility: hidden;
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+/********************
+LAYOUT & GRID STYLES
+********************/
+.wrap {
+	margin: 0 auto;
+	width: 96%;
+}
+
+/********************
+LINK STYLES
+********************/
+a,
+a:visited {
+	color: $link-color;
+	text-decoration: none;
+
+	// on hover
+	&:hover,
+	&:focus {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+	// mobile tap color
+	&:link {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .3);
+		//  this highlights links on iPhones/iPads. so it basically works like the: hover selector for mobile devices.
+	}
+}
+
+/*****************************************************************
+H1, H2, H3, H4, H5 STYLES
+*****************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+	// removing text decoration from all headline links
+	a {
+		text-decoration: none;
+	}
+}
+
+h1,
+.h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+	margin: .5rem 0;
+}
+
+h2,
+.h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin: 0 0 .5rem;
+}
+
+.sidebar h2,
+.sidebar .h2 {
+	font-size: 2.2em;
+	line-height: 1.1em;
+	margin-top: 1rem;
+
+	// text-transform: uppercase;
+}
+
+h3,
+.h3 {
+	font-size: 1.125em;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: 1rem;
+}
+
+h4,
+.h4 {
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+
+h5,
+.h5 {
+	font-size: .846em;
+	letter-spacing: 2px;
+	line-height: 2.09em;
+	text-transform: uppercase;
+}
+
+/********************
+HEADER STYLES
+********************/
+.slogan {
+	color: black(.5);
+}
+
+.header {
+	background-color: transparent;
+	transition: All 1s ease;
+}
+
+header.header {
+	background-color: black(1);
+	left: 0;
+	right: 0;
+	padding-top: 0;
+	position: fixed;
+	top: 0;
+	z-index: 9999999;
+
+	#inner-header {
+		position: relative;
+	}
+}
+
+// .home header.header {
+// 	background-color: black(1);
+// }
+
+@media only screen and (max-width: 880px) {
+	header.header {
+		right: 70px;
+		background-color: transparent;
+	}
+}
+@media only screen and (min-width: 881px) {
+	header.header {
+		right: 0;
+	}
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#logo {
+	font-size: 24px;
+	margin: 14px 0 0 20px;
+
+	a {
+		color: darken($white, 10%);
+		text-shadow: 0 0 1px $black;
+
+		&:hover,
+		&:focus {
+			color: $white;
+			text-shadow: 0 0 0 $black;
+		}
+	}
+}
+
+/********************
+NAVIGATION STYLES
+********************/
+.logo-wrap {
+	padding: 0;
+	margin: 0 .5rem 0 0;
+}
+
+nav {
+	.top-nav {
+		font-size: 18px;
+		padding-top: 0;
+		margin-top: 0;
+		line-height: 1;
+
+		li {
+			a {
+				padding-top: 1.4rem;
+			}
+		}
+	}
+}
+
+.tel {
+	display: inline;
+}
+
+footer .nav {
+	ul {
+		overflow: auto;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			float: none;
+			position: relative;
+
+			a {
+				color: $solar-orange;
+				&:hover,
+				&:link,
+				&:active,
+				&:focus {
+					color: darken($solar-orange, 25%);
+				}
+			}
+		}
+	}
+}
+
+/********************
+POSTS & CONTENT STYLES
+********************/
+#container article {
+	margin: 0;
+	padding: 1rem 0;
+}
+
+.gallery-item img {
+	height: auto;
+}
+
+// end .hentry
+
+.single-title,
+.page-title,
+.entry-title {
+	margin: 0;
+}
+
+// post meta
+.byline {
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
+}
+
+// entry content
+article {
+	h1 {
+		line-height: 1;
+		margin: 0;
+		padding: 0 0 .75rem 5px;
+	}
+
+	h2 {
+		line-height: 1.33;
+		padding-left: 5px;
+	}
+
+
+
+
+	ol {
+		list-style-position: inside;
+		list-style-type: decimal;
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	ul {
+		list-style-position: inside;
+		list-style-type: disc;
+	}
+
+	header {
+		padding: 1.5em 0 0;
+	}
+
+	footer {
+		padding: 1.5em;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	table {
+		border: 1px solid black(.3);
+		margin-bottom: 1.5em;
+		width: 100%;
+
+		caption {
+			color: $meta-gray;
+			font-size: .75em;
+			letter-spacing: 1px;
+			margin: 0 0 7px;
+			text-transform: uppercase;
+		}
+	}
+
+	tr {
+		border-bottom: 1px solid black(.4);
+
+		&:nth-child(even) {
+			background-color: black(.225);
+		}
+
+		&:nth-child(odd) {
+			background-color: black(.125);
+		}
+	}
+
+	td {
+		border-right: 1px solid black(.3);
+		padding: 7px;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	th {
+		background-color: black(.25);
+		border-bottom: 1px solid solid black(.4);
+		border-right: 1px solid black(.4);
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	blockquote {
+		color: $white;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	dd {
+		color: $gray;
+		font-size: .9em;
+		margin-bottom: 1.5em;
+		margin-left: 0;
+	}
+
+	img {
+		height: auto;
+		margin: 0;
+		width: 100%;
+	}
+	//
+	/* image alignment on a screen this size may be
+	a bit difficult. It's set to start aligning
+	and floating images at the next breakpoint,
+	but it's up to you. Feel free to change it up. */
+
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		height: auto;
+		max-width: 100%;
+	}
+
+	pre {
+		background: $black;
+		border-radius: 3px;
+		color: $light-gray;
+		font-size: .9em;
+		margin: 0 0 1.5em;
+		padding: 1.5em;
+	}
+}
+
+// end .entry-content
+
+.wp-caption {
+	max-width: 100%;
+	padding: 5px;
+
+	// images inside wp-caption
+	img {
+		margin-bottom: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: .85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
+}
+
+// end .wp-caption
+
+// the tag output
+.tags {
+	margin: 0;
+}
+
+/*****************************************************************
+PAGE NAVI STYLES
+*****************************************************************/
+.pagination,
+.wp-prev-next {
+	margin: 1.5em 0;
+}
+
+.pagination {
+	text-align: center;
+
+	ul {
+		background-color: black(.2);
+		border-radius: 3px;
+		clear: both;
+		display: inline-block;
+		overflow: auto;
+		padding: 0;
+		white-space: nowrap;
+	}
+
+	li {
+		border-right: 1px solid $gray;
+		display: inline;
+		float: left;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	a,
+	span {
+		color: $blue;
+		display: block;
+		font-size: 1em;
+		font-weight: normal;
+		line-height: 1em;
+		margin: 0;
+		min-width: 1em;
+		padding: .75em;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+
+	.current {
+		color: $text-color;
+		cursor: default;
+
+		&:hover,
+		&:focus {
+			background-color: $white;
+			color: $text-color;
+		}
+	}
+}
+
+// end .solarity_
+
+//page_navi
+
+.wp-prev-next {
+	.prev-link {
+		float: left;
+	}
+
+	.next-link {
+		float: right;
+	}
+}
+
+// end .wp-prev-next
+
+/********************
+SIDEBARS & ASIDES
+********************/
+.sidebar {
+	padding: 20px .5rem 0 1rem;
+
+	p {
+		-moz-hyphens: none;
+		hyphens: none;
+		padding-right: 1rem;
+		word-wrap: normal;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	.locations {
+		ul {
+			line-height: 1.2;
+			list-style-type: disc;
+			margin: 0;
+			padding: 0;
+		}
+
+		h3 {
+			font-variant: small-caps;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	textarea,
+	input,
+	select,
+	input[type='search'] {
+		border-radius: 3px;
+		border: 0 none;
+		box-shadow: none;
+		color: rgb(92, 107, 128);
+		display: inline-block;
+		float: left;
+		font-size: 1em;
+		height: 1.3rem;
+		line-height: 1rem;
+		margin-bottom: 14px;
+		padding: 0 2px !important;
+		top: .4em;
+		vertical-align: middle;
+		width: 120px;
+	}
+
+	button {
+		float: left;
+		position: relative;
+		width: 70px;
+	}
+
+	form {
+		width: 90%;
+	}
+
+	.cat-item a {
+		color: darken($gray, 25%);
+		font-weight: normal;
+	}
+
+	.current-cat > a {
+		color: $white;
+		font-weight: 700;
+	}
+
+	.children {
+		padding-left: 1.5em;
+	}
+} //end sidebar
+
+label {
+	display: none;
+	float: left;
+	margin: 0 .5rem 0 0;
+}
+
+
+
+.widget {
+	ul {
+		li {
+			// deep nesting
+		}
+	}
+}
+
+.no-widgets {
+	border-radius: 2px;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	text-align: center;
+	// background-color: $white;
+	// border: 1px solid $border-color;
+}
+
+/********************
+FOOTER STYLES
+********************/
+.footer {
+	background-color: black(.3);
+	clear: both;
+	color: $light-gray;
+}
+
+
+
+// end .footer-links
+
+.copyright {
+	display: block;
+	text-align: center;
+}
+
+//gallery acf additions
+//location map
+.acf-map {
+	border: $meta-gray solid 2px;
+	height: 220px;
+	margin: 0 0 1rem;
+	max-height: 80%;
+	max-width: 100%;
+	width: 100%;
+}
+
+.gm-style .gm-style-iw {
+	color: $text-color;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.gallery {
+	clear: both;
+}
+
+.ghostbox {
+	background: white(.15);
+	float: right;
+	margin: 0 0 .25rem 1rem;
+	padding: 0 .5rem .25rem;
+}
+
+.archive-title {
+	padding: 1.5rem 0 .75rem;
+}
+
+//gallery plugin styles start here
+
+
+
+
+#imageData #caption {
+	color: $text-color;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	margin-top: .5rem;
+}
+
+#imageData #numberDisplay {
+	color: $meta-gray;
+	font-size: 1rem;
+	margin-top: .5rem;
+	padding-bottom: 0;
+}
+
+img.alignleft {
+	margin-right: 1rem;
+}
+
+article nav ul,
+article .nav ul {
+	list-style-type: none;
+}
+
+.player .video-wrapper {
+	display: inline-block;
+	position: relative !important;
+	text-align: center;
+	width: 100%;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+header h1,
+header .deck {
+	margin: 0;
+}
+
+header .deck {
+	padding-top: 0;
+}
+
+.featured-block {
+	background: $white .2;
+	padding: 0;
+	text-align: left;
+}
+
+.gallery-caption {
+	padding: 0 2rem 2rem;
+	text-align: center;
+}
+
+.main-content header {
+	margin-top: 1rem;
+}
+
+.entry-content {
+	margin-top: 20px;
+}
+
+.single-format-gallery .arve-wrapper {
+	margin: 0;
+}
+
+.flex-control-paging li a {
+	background-color: rgba(255, 255, 255, .26);
+
+	&.flex-active {
+		background-color: black;
+	}
+}
+
+// header.header h1 {
+// 	color: #ffffff;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 20px;
+// 	line-height: 40px;
+// 	display: none;
+// }
+//
+// @media screen and (max-width:880px) {
+// 	header.header h1 {
+// 		display: block;
+// 	}
+// }

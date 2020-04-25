@@ -1,0 +1,230 @@
+
+
+.metaslider-2775,
+.metaslider_2587 {
+	.flexslider .caption-wrap {
+		left: 0;
+
+		.caption,
+		.cs-title,
+		.nivo-caption {
+			font: 28px/32px Palatino, sans;
+			text-shadow: 0 0 12.96px rgba(0, 0, 0, .8);
+
+			strong {
+				font: 36px/42px Palatino, sans;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+.acf-map {
+	height: 400px;
+}
+
+/*********************
+GENERAL STYLES
+*********************/
+#container article {
+	padding: 0;
+}
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 660px;
+	 > .last-col {
+		padding-top: 20px;
+	}
+}
+
+/*********************
+HEADER STYLES
+*********************/
+.logo-wrap {
+	float: left;
+}
+
+.social-buttons {
+	float: right;
+}
+
+
+header .top-nav {
+	padding-top: 0;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	border: 0;
+	margin: 0;
+
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+			color: darken($white, 5%);
+			display: block;
+			padding: .75em;
+			text-decoration: none;
+			text-shadow: 0 0 1px $black;
+
+			&:hover,
+			&:focus {
+				background-color: white(.75);
+				text-decoration: none;
+				text-shadow: 0 0 0 transparent;
+			}
+		}
+
+		.sub-menu,
+		.children {
+			//level 2 menus
+			li {
+				line-height: 1.2;
+
+				a {
+					background-color: white(.85);
+					color: $black;
+					padding: 10px 10px 10px 30px;
+					text-shadow: 0 0 0 transparent;
+
+					&:hover,
+					&:focus {
+						background-color: $black .8;
+						color: $white 1;
+					}
+				}
+
+				//level 3 menus
+				.sub-menu li,
+				.children li {
+					a {
+						font-size: 1rem;
+						padding-left: 10px;
+
+						&:hover,
+						&:focus {
+							background-color: $black .8;
+							color: $white 1;
+						}
+					}
+				}
+			}
+		}
+
+		ul {
+			margin-top: 0;
+		}
+
+		ul.sub-menu,
+		ul.children {
+			border: 1px solid $white .8;
+			border-top: 0;
+			margin-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+				a {
+					background-color: $white .95;
+					border: 1px solid $white .85;
+					border-right: 0;
+					display: block;
+					padding: 10px 5px 10px 10px;
+					text-decoration: none;
+					width: 170px;
+
+					&:hover,
+					&:focus {
+						background-color: $black;
+						color: $white;
+						text-decoration: none;
+					}
+				}
+
+				&:last-child {
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				ul {
+					left: 100%;
+					top: 0;
+				}
+			}
+			/* highlight sub-menu current page */
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility: visible;
+		}
+	}
+	/* end .menu ul li */
+}
+/* end .nav */
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 0;
+}
+
+.widgettitle {
+	margin-bottom: .5rem;
+}
+
+.widget {
+	margin: 0 0 1rem;
+	padding: 0 10px;
+
+	ul {
+		li {
+			margin-bottom: .25rem;
+			/* deep nesting */
+			ul {
+				margin-top: .5rem;
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			/*
+be careful with the depth of your menus.
+it's very rare to have multi-depth menus in
+the footer.
+*/
+		}
+	}
+}
+
+/* end .footer-links */
